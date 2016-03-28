@@ -10,13 +10,12 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    // print every combination of ABC
-    @IBOutlet weak  var _comboTextView: UITextView!
+    @IBOutlet weak  var totalPermutations: UILabel!         // print total permutations count of ABC
+    @IBOutlet weak  var _comboTextView: UITextView!         // print every combination of ABC
     @IBOutlet       var _outputLabel: UILabel!
                     var _currentCount = 0
     
     let combinationsArray: [String] = ["A", "B", "C"]
-    var outputCombinationsArray = Array<String>()
     
     /**
      * Initialization
@@ -33,14 +32,17 @@ class ViewController: UIViewController
      */
     func printCombinations()
     {
+        var totalCombinations = 0
         var str: String = ""
         for letter in combinationsArray {
             for nextLetter in combinationsArray {
                 for nextNextLetter in combinationsArray {
+                    totalCombinations++
                     str += (letter + nextLetter + nextNextLetter + "\n")
                 }
             }
         }
+        totalPermutations.text = ("Permutations: " + String(totalCombinations))
         _comboTextView.text = str
     }
 

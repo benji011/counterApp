@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="21" id="luN-eI-LtT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hX8-3N-c1u">
@@ -37,10 +37,16 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ecv-nC-var">
                                 <rect key="frame" x="40" y="156" width="240" height="392"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Permutations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2h-Td-iGn">
+                                <rect key="frame" x="83" y="127" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -51,7 +57,9 @@
                             <constraint firstItem="yv4-OL-NqK" firstAttribute="centerX" secondItem="Ecv-nC-var" secondAttribute="centerX" id="bk4-jo-N3N"/>
                             <constraint firstItem="yv4-OL-NqK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="cTB-9n-wac"/>
                             <constraint firstItem="yv4-OL-NqK" firstAttribute="centerX" secondItem="hX8-3N-c1u" secondAttribute="centerX" id="ovr-C3-ZkV"/>
+                            <constraint firstItem="Ecv-nC-var" firstAttribute="top" secondItem="Q2h-Td-iGn" secondAttribute="bottom" constant="8" symbolic="YES" id="pnG-IW-b0V"/>
                             <constraint firstItem="Ecv-nC-var" firstAttribute="top" secondItem="yv4-OL-NqK" secondAttribute="bottom" constant="93" id="rQW-LY-bm3"/>
+                            <constraint firstItem="Q2h-Td-iGn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="67" id="ryf-uo-yO1"/>
                             <constraint firstAttribute="bottom" secondItem="Ecv-nC-var" secondAttribute="bottom" constant="20" symbolic="YES" id="zHr-my-Mqm"/>
                         </constraints>
                     </view>
@@ -60,6 +68,7 @@
                     <connections>
                         <outlet property="_comboTextView" destination="Ecv-nC-var" id="hHx-kG-4Jh"/>
                         <outlet property="_outputLabel" destination="yv4-OL-NqK" id="btc-To-SnN"/>
+                        <outlet property="totalPermutations" destination="Q2h-Td-iGn" id="SiQ-pm-DYH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
